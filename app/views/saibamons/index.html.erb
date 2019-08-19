@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Saibamons</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Species</th>
+      <th>Gender</th>
+      <th>Birthday</th>
+      <th>Owner</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @saibamons.each do |saibamon| %>
+      <tr>
+        <td><%= saibamon.name %></td>
+        <td><%= saibamon.species %></td>
+        <td><%= saibamon.gender %></td>
+        <td><%= saibamon.birthday %></td>
+        <td><%= saibamon.owner %></td>
+        <td><%= link_to 'Show', saibamon %></td>
+        <td><%= link_to 'Edit', edit_saibamon_path(saibamon) %></td>
+        <td><%= link_to 'Destroy', saibamon, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Saibamon', new_saibamon_path %>

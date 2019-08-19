@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @saibamon.name %>
+</p>
+
+<p>
+  <strong>Species:</strong>
+  <%= @saibamon.species %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @saibamon.gender %>
+</p>
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @saibamon.birthday %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @saibamon.owner %>
+</p>
+
+<%= link_to 'Edit', edit_saibamon_path(@saibamon) %> |
+<%= link_to 'Back', saibamons_path %>

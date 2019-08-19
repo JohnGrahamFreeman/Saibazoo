@@ -1,0 +1,2 @@
+class Saibamon < ApplicationRecord
+end
