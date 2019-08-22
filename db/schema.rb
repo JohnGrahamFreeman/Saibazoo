@@ -17,10 +17,20 @@ ActiveRecord::Schema.define(version: 2019_08_19_225857) do
 
   create_table "saibamons", force: :cascade do |t|
     t.string "name"
-    t.string "species"
+    t.bigint "species_id"
     t.string "gender"
-    t.string "birthday"
-    t.string "owner"
+    t.datetime "birthday"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["species_id"], name: "index_saibamons_on_species_id"
+    t.index ["user_id"], name: "index_saibamons_on_user_id"
+  end
+
+  create_table "species", force: :cascade do |t|
+    t.string "name"
+    t.string "subtype"
+    t.text "traits"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -37,4 +47,6 @@ ActiveRecord::Schema.define(version: 2019_08_19_225857) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "saibamons", "species"
+  add_foreign_key "saibamons", "users"
 end
