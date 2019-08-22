@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2019_08_19_225857) do
     t.string "name"
     t.string "subtype"
     t.text "traits"
+    t.string "image_path", default: "default.png"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

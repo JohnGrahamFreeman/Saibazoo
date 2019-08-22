@@ -4,7 +4,7 @@ class CreateSpecies < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :subtype
       t.text :traits
-      t.string :image_path
+      t.string :image_path, :default => "default.png"
       t.timestamps
     end
   end
