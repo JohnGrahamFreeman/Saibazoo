@@ -1,15 +1,11 @@
 
-<%= simple_form_for(@saibamon) do |f| %>
+<%= simple_form_for(@species) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
     <%= f.input :name %>
-    <%= f.input :species %>
-    <%= f.input :gender %>
-    <%= hidden_field_tag :birthday, DateTime.now %>
-    <%= hidden_field_tag :user, current_user %>
-    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <%= f.input :type %>
   </div>
 
   <div class="form-actions">
