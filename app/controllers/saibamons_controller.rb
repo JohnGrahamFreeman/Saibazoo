@@ -1,6 +1,7 @@
 class SaibamonsController < ApplicationController
   before_action :set_saibamon, only: [:show, :edit, :update, :destroy]
 
+  NATURES = ["gentle", "kind", "Excellent Finder", "Fierce", "Ambitious", "Brave"]
   # GET /saibamons
   # GET /saibamons.json
   def index
@@ -27,6 +28,7 @@ class SaibamonsController < ApplicationController
     @user = current_user
     @saibamon = Saibamon.new(saibamon_params)
     @saibamon.user = @user
+    @saibamon.nature = NATURES.sample
 
     respond_to do |format|
       if @saibamon.save
