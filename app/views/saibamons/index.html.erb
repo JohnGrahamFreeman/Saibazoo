@@ -19,7 +19,7 @@
     <% current_user.saibamons.each do |saibamon| %>
       <tr>
         <td><%= saibamon.name %></td>
-        <td><%= saibamon.species %></td>
+        <td><%= saibamon.species.name %></td>
         <td><%= saibamon.gender %></td>
         <td><%= saibamon.birthday %></td>
         <td><%= link_to 'Show', saibamon %></td>

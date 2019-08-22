@@ -24,7 +24,9 @@ class SaibamonsController < ApplicationController
   # POST /saibamons
   # POST /saibamons.json
   def create
+    @user = current_user
     @saibamon = Saibamon.new(saibamon_params)
+    @saibamon.user = @user
 
     respond_to do |format|
       if @saibamon.save
@@ -69,6 +71,6 @@ class SaibamonsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def saibamon_params
-      params.require(:saibamon).permit(:name, :species, :gender, :birthday, :owner)
+      params.require(:saibamon).permit(:name, :species_id, :gender, :birthday)
     end
 end

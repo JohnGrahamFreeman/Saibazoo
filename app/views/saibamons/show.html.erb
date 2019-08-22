@@ -7,7 +7,7 @@
 
 <p>
   <strong>Species:</strong>
-  <%= @saibamon.species %>
+  <%= @saibamon.species.name %>
 </p>
 
 <p>
@@ -22,7 +22,7 @@
 
 <p>
   <strong>Owner:</strong>
-  <%= @saibamon.owner %>
+  <%= @saibamon.user.email %>
 </p>
 
 <%= link_to 'Edit', edit_saibamon_path(@saibamon) %> |
