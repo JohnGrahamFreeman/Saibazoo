@@ -7,9 +7,9 @@
     <%= f.input :name %>
     <%= f.association :species, input_html: { class: "beautiful-dropdown" }, include_hidden: false %>
     <%= f.input :gender %>
-    <%= hidden_field_tag :birthday, DateTime.now %>
     <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
   </div>
+  <%= DateTime.now %>
 
   <div class="form-actions">
     <%= f.button :submit %>
