@@ -29,7 +29,7 @@ class SaibamonsController < ApplicationController
     @saibamon = Saibamon.new(saibamon_params)
     @saibamon.user = @user
     @saibamon.nature = NATURES.sample
-    @saibamon.birthday = DateTime.now
+    @saibamon.birthday = Date.today
 
     respond_to do |format|
       if @saibamon.save

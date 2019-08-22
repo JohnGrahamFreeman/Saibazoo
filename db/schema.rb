@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2019_08_19_225857) do
     t.bigint "species_id"
     t.string "gender"
     t.string "nature"
-    t.datetime "birthday"
+    t.date "birthday"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

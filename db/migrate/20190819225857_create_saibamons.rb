@@ -5,7 +5,7 @@ class CreateSaibamons < ActiveRecord::Migration[5.2]
       t.references :species, foreign_key: true
       t.string :gender
       t.string :nature
-      t.datetime :birthday
+      t.date :birthday
       t.references :user, foreign_key: true
 
       t.timestamps
