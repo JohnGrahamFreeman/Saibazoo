@@ -3,7 +3,7 @@
 
 
 
-<img src=<%= "#{@saibamon.species.image_path}" %> alt="" class="pet pet-bordered">
+<img src=<%= "#{@saibamon.species.image_path}" %> alt=<%= "#{@saibamon.name}"%> class="pet pet-bordered">
 
 <p>
   <strong>Name:</strong>
@@ -12,7 +12,7 @@
 
 <p>
   <strong>Species:</strong>
-  <%= @saibamon.species.name %>
+  <%=link_to "#{@saibamon.species.name}", species_path(@saibamon.species)%>
 </p>
 
 <p>

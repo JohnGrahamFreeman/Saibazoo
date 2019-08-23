@@ -1,13 +1,20 @@
 <p id="notice"><%= notice %></p>
 
+<img src=<%= "#{@species.image_path}" %> alt=<%= "#{@species.name}"%> class="pet pet-bordered">
+
 <p>
   <strong>Name:</strong>
   <%= @species.name %>
 </p>
 
 <p>
-  <strong>Type:</strong>
-  <%= @species.type %>
+  <strong>Subype:</strong>
+  <%= @species.subtype %>
+</p>
+
+<p>
+ <strong>Description:</strong>
+  <%= @species.traits %>
 </p>
 
 <%= link_to 'Edit', edit_species_path(@species) %> |
