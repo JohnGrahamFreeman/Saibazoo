@@ -1,39 +1,45 @@
 
 <p id="notice"><%= notice %></p>
 
-
-
+<div class="petcard">
+  <div class="container">
+    <div class="row">
 <img src=<%= "#{@saibamon.species.image_path}" %> alt=<%= "#{@saibamon.name}"%> class="pet pet-bordered">
-
-<p>
+</div>
+<div class="row">
+<table>
+<tr>
   <strong>Name:</strong>
   <%= @saibamon.name %>
-</p>
+</tr>
 
-<p>
+<tr>
   <strong>Species:</strong>
   <%=link_to "#{@saibamon.species.name}", species_path(@saibamon.species)%>
-</p>
+</tr>
 
-<p>
+<tr>
   <strong>Nature:</strong>
   <%= @saibamon.nature %>
-</p>
+</tr>
 
-<p>
+<tr>
   <strong>Gender:</strong>
   <%= @saibamon.gender %>
-</p>
+</tr>
 
-<p>
+<tr>
   <strong>Birthday:</strong>
   <%= @saibamon.birthday %>
-</p>
+</tr>
 
-<p>
+<tr>
   <strong>Owner:</strong>
   <%= @saibamon.user.email %>
-</p>
-
+</tr>
+</table>
+</div>
+</div>
+</div>
 <%= link_to 'Edit', edit_saibamon_path(@saibamon) %> |
 <%= link_to 'Back', saibamons_path %>
