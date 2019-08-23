@@ -18,7 +18,8 @@ Species.create!(
 Species.create!(
   name: "Quelm",
   subtype: "Avian",
-  traits: "A cool and calm bird who is also plant-like"
+  traits: "A cool and calm bird who is also plant-like",
+  image_path: "https://res.cloudinary.com/johngfreeman/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566570533/quelm.png"
 )
 Species.create!(
   name: "Snaw",
